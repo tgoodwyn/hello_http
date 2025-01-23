@@ -16,6 +16,15 @@ In prod we generally run our app on 12344.  If you want to set the dev envup so 
 docker run -d -p 12344:8081 hello_http
 ```
 
+
+## How to test
+
 The application will be available at `http://localhost:12344`
+
+```bash
+curl http://localhost:12344
+```
+
+You should receive 'hello, world' in response.
 
 
