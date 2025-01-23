@@ -2,17 +2,20 @@
 Hello world with a webserver in C
 
 
-## How to build
-```gcc -o dummyserv dummy_serv.c```
+### How to build
 
-Or to build a static binary
-
-```gcc -o dummyserv dummy_serv.c```
+Build the Docker image
+```bash
+docker build -t hello_http .
+```
 
 ## How to run
-The port argument is optional and when not included the service will default to port 8080
+In prod we generally run our app on 12344.  If you want to set the dev envup so that it can be reached on port 12344:
 
-```dummyserv <port>```
+```bash
+docker run -d -p 12344:8081 hello_http
+```
 
+The application will be available at `http://localhost:12344`
 
 
